@@ -2,7 +2,7 @@ An example project that uses the dashboardScaffold library.
 
 ![An example dashboard](http://farm6.staticflickr.com/5532/9449466691_6c55d58033_z.jpg "Example Dashboard")
 
-[Try it out!](http://curran.github.io/dashboardScaffold/example/index.html)
+[Try it out!](http://curran.github.io/dashboardScaffoldExample/index.html)
 
 When you click on a color or number in the configurator on the left, an interactive editor (color chooser or slider) pops up. When you manipulate the configuration, it is propagated through the dashboard layout to the component visualizations instantly. When you edit properties of the visualizations through their own UI interactions, the configuration JSON is instantly updated.
 
