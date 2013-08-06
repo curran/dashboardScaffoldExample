@@ -24,8 +24,8 @@ define(['d3', 'underscore', 'leaflet', 'getterSetters', 'loadCSS', 'leafletProvi
                 attributionControl: false
             }),
             settingPanZoom = false,
-            updatePanZoom = function(){
-                if(!settingPanZoom){
+            updatePanZoom = function () {
+                if (!settingPanZoom) {
                     map.setView(my.pan(), my.zoom());
                 }
             },
@@ -64,15 +64,15 @@ define(['d3', 'underscore', 'leaflet', 'getterSetters', 'loadCSS', 'leafletProvi
         updatePanZoom();
         my.pan.on('change', updatePanZoom);
         my.zoom.on('change', updatePanZoom);
-        map.on('moveend', function(){
+        map.on('moveend', function () {
             var latLng = map.getCenter(),
                 pan = [latLng.lat, latLng.lng],
                 zoom = map.getZoom();
             settingPanZoom = true;
-            if(!_.isEqual(my.pan(), pan)){
+            if (!_.isEqual(my.pan(), pan)) {
                 my.pan(pan);
             }
-            if(my.zoom() !== zoom){
+            if (my.zoom() !== zoom) {
                 my.zoom(zoom);
             }
             settingPanZoom = false;
