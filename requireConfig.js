@@ -1,4 +1,5 @@
 (function(){
+
   //var dashboardScaffoldDir = '../bower_components/dashboardScaffold';
   var dashboardScaffoldDir = 'http://curran.github.io/dashboardScaffold/v0.1.1';
   require.config({
@@ -6,8 +7,6 @@
       {
         name: 'dashboardScaffold',
         location: dashboardScaffoldDir,
-        // If using Bower, you may want to use:
-        //location:'../bower_components/dashboardScaffold/js';
       }
     ],
     paths: {
