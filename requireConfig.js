@@ -1,5 +1,5 @@
 (function(){
-  var dashboardScaffoldDir = '../../js';
+  var dashboardScaffoldDir = '../lib/dashboardScaffold';
   require.config({
     packages: [
       {
