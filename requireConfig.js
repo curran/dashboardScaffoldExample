@@ -2,6 +2,7 @@
 
   //var dashboardScaffoldDir = '../bower_components/dashboardScaffold';
   var dashboardScaffoldDir = 'http://curran.github.io/dashboardScaffold/v0.1.1';
+  //var dashboardScaffoldDir = '../../dashboardScaffold';
   require.config({
     packages: [
       {

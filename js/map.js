@@ -16,11 +16,19 @@ define(['d3', 'underscore', 'leaflet', 'getterSetters', 'loadCSS', 'leafletProvi
                 maxClusterRadius: 80,
                 showNumbers: false,
                 width: 0,
-                height: 0
+                height: 0,
+                pan: [0, 0],
+                zoom: 1
             }),
             map = L.map(div, {
                 attributionControl: false
-            }).setView([0, 0], 1),
+            }),
+            settingPanZoom = false,
+            updatePanZoom = function(){
+                if(!settingPanZoom){
+                    map.setView(my.pan(), my.zoom());
+                }
+            },
             updateSize = _.debounce(function () {
                 // This call causes proper resize handling.
                 map.invalidateSize();
@@ -52,6 +60,23 @@ define(['d3', 'underscore', 'leaflet', 'getterSetters', 'loadCSS', 'leafletProvi
 
         my.width.on('change', updateSize);
         my.height.on('change', updateSize);
+
+        updatePanZoom();
+        my.pan.on('change', updatePanZoom);
+        my.zoom.on('change', updatePanZoom);
+        map.on('moveend', function(){
+            var latLng = map.getCenter(),
+                pan = [latLng.lat, latLng.lng],
+                zoom = map.getZoom();
+            settingPanZoom = true;
+            if(!_.isEqual(my.pan(), pan)){
+                my.pan(pan);
+            }
+            if(my.zoom() !== zoom){
+                my.zoom(zoom);
+            }
+            settingPanZoom = false;
+        });
     //TODO          minRadius: 8,
     //TODO          maxRadius: 40,
     //TODO          maxClusterRadius: 80,
