@@ -1,0 +1,18 @@
+{
+  "name": "dashboardScaffold",
+  "version": "0.1.1",
+  "main": "main.js",
+  "ignore": [
+    ".git",
+    "README.md"
+  ],
+  "homepage": "https://github.com/curran/dashboardScaffold",
+  "_release": "0.1.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.1.1",
+    "commit": "493f3fc9ef388cc91c9e9f7c1406d0c949298713"
+  },
+  "_source": "git://github.com/curran/dashboardScaffold.git",
+  "_target": "~0.1.1"
+}

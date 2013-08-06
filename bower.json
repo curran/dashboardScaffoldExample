@@ -1,0 +1,12 @@
+{
+  "name": "dashboardScaffoldExample",
+  "version": "0.0.0",
+  "main": "index.html",
+  "ignore": [
+    "node_modules",
+    "bower_components",
+  ],
+  "dependencies": {
+    "dashboardScaffold": "git://github.com/curran/dashboardScaffold.git#~0.1.1"
+  }
+}

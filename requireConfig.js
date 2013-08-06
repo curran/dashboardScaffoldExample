@@ -1,5 +1,5 @@
 (function(){
-  var dashboardScaffoldDir = '../lib/dashboardScaffold';
+  var dashboardScaffoldDir = '../bower_components/dashboardScaffold';
   require.config({
     packages: [
       {
