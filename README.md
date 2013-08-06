@@ -1,4 +1,4 @@
-An example project that uses the dashboardScaffold library.
+An example project that uses the [dashboardScaffold library](https://github.com/curran/dashboardScaffold).
 
 ![An example dashboard](http://farm6.staticflickr.com/5532/9449466691_6c55d58033_z.jpg "Example Dashboard")
 
@@ -6,16 +6,16 @@ An example project that uses the dashboardScaffold library.
 
 When you click on a color or number in the configurator on the left, an interactive editor (color chooser or slider) pops up. When you manipulate the configuration, it is propagated through the dashboard layout to the component visualizations instantly. When you edit properties of the visualizations through their own UI interactions, the configuration JSON is instantly updated.
 
-A development server is included. To start the server:
+A static file server is included for development. To start the server:
 
  * Make sure you have Node.js and Express installed
    * `npm install express`
  * Run `node server.js`
 
-There are two pages:
+There are two pages to check out:
 
- * `index.html` shows the dashboard with an editor panel
- * `dashboard.html` shows the dashboard full-screen with no editor
+ * [`index.html`](http://curran.github.io/dashboardScaffoldExample/index.html) shows the dashboard with an editor panel
+ * [`dashboard.html`](http://curran.github.io/dashboardScaffoldExample/dashboard.html) shows the dashboard full-screen with no editor
 
 There are two example visualization modules:
 
