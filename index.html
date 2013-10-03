@@ -6,6 +6,11 @@
   <link rel="stylesheet" href="lib/inlet.css">
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.12.0/codemirror.min.css">
   <style>
+    /* apply a natural box layout model to all elements */
+    /* from http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+    *, *:before, *:after {
+      -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+    }
     html, body {
       margin: 0;
       height: 100%;
